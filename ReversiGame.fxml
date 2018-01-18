@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="gameapp.BoardGameController"
+      prefHeight="400.0" prefWidth="550.0"
+      fx:id="root">
+    <VBox fx:id="info">
+        <Button fx:id="start" minWidth="120" onMouseClicked="#startGame">Start Game</Button>
+        <Button fx:id="end" minWidth="120" onMouseClicked="#endGame">End Game</Button>
+        <HBox>
+            <Label>Current player:</Label>
+        </HBox>
+        <HBox>
+            <Label fx:id="playingPlayer">First player</Label>
+        </HBox>
+        <VBox>
+            <Label>First player</Label>
+            <HBox spacing="10">
+                <Label>score:</Label>
+                <Label fx:id="blackScoreLabel">2</Label>
+            </HBox>
+        </VBox>
+        <VBox>
+            <Label>Second player</Label>
+            <HBox spacing="10">
+                <Label>score:</Label>
+                <Label fx:id="whiteScoreLabel">2</Label>
+            </HBox>
+        </VBox>
+        <VBox prefHeight="100" spacing="10" alignment="CENTER">
+            <Label fx:id="winnerLabel" visible="false">win!</Label>
+            <Label fx:id="winnerLabel2" visible="false"></Label>
+            <Button fx:id="closeButton" onMouseClicked="#exitGameWindow" visible="false" minWidth="80">Close</Button>
+        </VBox>
+    </VBox>
+</HBox>
